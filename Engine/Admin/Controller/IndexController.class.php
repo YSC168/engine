@@ -1,8 +1,41 @@
 <?php
-namespace Home\Controller;
+namespace Admin\Controller;
 use Think\Controller;
 class IndexController extends Controller {
+    //载入首页左边导航
     public function index(){
-        $this->show('<style type="text/css">*{ padding: 0; margin: 0; } div{ padding: 4px 48px;} body{ background: #fff; font-family: "微软雅黑"; color: #333;font-size:24px} h1{ font-size: 100px; font-weight: normal; margin-bottom: 12px; } p{ line-height: 1.8em; font-size: 36px }</style><div style="padding: 24px 48px;"> <h1>:)</h1><p>欢迎使用 <b>ThinkPHP</b>！</p><br/>[ 您现在访问的是Home模块的Index控制器 ]</div><script type="text/javascript" src="http://tajs.qq.com/stats?sId=9347272" charset="UTF-8"></script>','utf-8');
+        $this->display('Index/index_');
+    }
+    //载入iform内容
+    public function index_v1(){
+        $this->display('Index/index_v1_');
+    }
+    //查看所有通知
+    public function AllInform(){
+        $this->display('Index/inform_show');
+    }
+    //管理通知
+    public function InformManager(){
+        $this->display('Index/inform_manager');
+    }
+    //展示全部文件
+    public function AllFile(){
+        $this->display('Index/file_show');
+    }
+    //文件管理
+    public function FileManager(){
+        $this->display('Index/file_manager');
+    }
+    //展示全部报表
+    public function  ALLReport(){
+        $this->display('Index/report_show');
+    }
+    //管理报表
+    public function ReportManager(){
+        $this->display('Index/report_manager');
+    }
+    //报表的设置
+    public function OptionReport(){
+        $this->display('Index/option_report');
     }
 }
