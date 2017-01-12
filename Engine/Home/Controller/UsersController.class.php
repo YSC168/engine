@@ -34,14 +34,14 @@ class UsersController extends Controller
             $model = D('Users');
             $res   = $model->checkUser($name, $pw);
             if ($res) {
-                $res = array(
-                    'Status' => 1,
-                    'Mes'    => '账号密码不匹配',
+            	$res = array(
+                    'Status' => 200,
+                    'Mes'    => '登录成功！',
                 );
             } else {
                 $res = array(
-                    'Status' => 200,
-                    'Mes'    => '登录成功！',
+                    'Status' => 1,
+                    'Mes'    => '账号密码不匹配',
                 );
             }
             $this->ajaxReturn($res);

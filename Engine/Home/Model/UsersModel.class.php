@@ -18,7 +18,6 @@ class UsersModel extends Model
         $map['logname']  = $name;
         $map['password'] = $pw;
         $res             = $model->where($map)->find();
-        var_dump($res);
         if(empty($res)){
         	return false;
         }else{

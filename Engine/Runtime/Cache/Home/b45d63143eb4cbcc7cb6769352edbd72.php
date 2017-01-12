@@ -44,10 +44,7 @@ body { background-color: #2B2B2B; }
 <script type="text/javascript" src="/engine/Public/js/jq/jquery.min.js"></script>
 <script type="text/javascript">
 $('#login-button').click(function(event){
-	alert('sdfg');
 	event.preventDefault();
-	$('form').fadeOut(500);
-	$('.wrapper').addClass('form-success');
 	$.ajax({
         type: "POST",
         url: "<?php echo U('Home/users/checkUser');?>",
@@ -57,10 +54,15 @@ $('#login-button').click(function(event){
         },
         dataType: "json",
         success: function (res) {
-        	console.log(res);
+        	if(res.Status==200){
+        		setTimeout(window.location.href='<?php echo U("Index/index");?>',4000);
+        	$('form').fadeOut(500);
+			$('.wrapper').addClass('form-success');
+        	}else{
+        		alert(res.Mes);
+        	}
         }
     });
-	// setTimeout(window.location.href='<?php echo U("Index/index");?>',4000);
 });
 </script>
 
