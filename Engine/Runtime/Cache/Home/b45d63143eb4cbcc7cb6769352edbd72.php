@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CSS3动态背景登录框代码</title>
 
-<link rel="stylesheet" type="text/css" href="/jd/Public/css/login/styles.css">
+<link rel="stylesheet" type="text/css" href="/engine/Public/css/login/styles.css">
 <style type="text/css">
 body,td,th { font-family: "Source Sans Pro", sans-serif; }
 body { background-color: #2B2B2B; }
@@ -20,8 +20,8 @@ body { background-color: #2B2B2B; }
 	<div class="container">
 		<h1>Welcome</h1>
 		<form class="form">
-			<input type="text" placeholder="Username">
-			<input type="password" placeholder="Password">
+			<input type="text" id='name' name='name' placeholder="Username">
+			<input type="password" id='pw' name='pw' placeholder="Password">
 			<button type="submit" id="login-button">Login</button>
 		</form>
 	</div>
@@ -41,13 +41,26 @@ body { background-color: #2B2B2B; }
 	
 </div>
 
-<script type="text/javascript" src="/jd/Public/js/jq/jquery.min.js"></script>
+<script type="text/javascript" src="/engine/Public/js/jq/jquery.min.js"></script>
 <script type="text/javascript">
 $('#login-button').click(function(event){
+	alert('sdfg');
 	event.preventDefault();
 	$('form').fadeOut(500);
 	$('.wrapper').addClass('form-success');
-	setTimeout(window.location.href='<?php echo U("Index/index");?>',4000);
+	$.ajax({
+        type: "POST",
+        url: "<?php echo U('Home/users/checkUser');?>",
+        data: {
+        	name:$('#name').val(),
+            pw: $('#pw').val(),
+        },
+        dataType: "json",
+        success: function (res) {
+        	console.log(res);
+        }
+    });
+	// setTimeout(window.location.href='<?php echo U("Index/index");?>',4000);
 });
 </script>
 

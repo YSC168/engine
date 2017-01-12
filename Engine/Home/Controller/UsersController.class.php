@@ -16,8 +16,8 @@ class UsersController extends Controller
      */
     public function checkUser()
     {
-        $name = I('get.name');
-        $pw   = I('get.pw');
+        $name = I('post.name');
+        $pw   = I('post.pw');
         if (empty($name)) {
             $res = array(
                 'Status' => 0,
@@ -33,7 +33,19 @@ class UsersController extends Controller
         } else {
             $model = D('Users');
             $res   = $model->checkUser($name, $pw);
-            var_dump($res);
+            if ($res) {
+                $res = array(
+                    'Status' => 1,
+                    'Mes'    => '账号密码不匹配',
+                );
+            } else {
+                $res = array(
+                    'Status' => 200,
+                    'Mes'    => '登录成功！',
+                );
+            }
+            $this->ajaxReturn($res);
         }
     }
+
 }

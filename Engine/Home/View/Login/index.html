@@ -20,8 +20,8 @@ body { background-color: #2B2B2B; }
 	<div class="container">
 		<h1>Welcome</h1>
 		<form class="form">
-			<input type="text" placeholder="Username">
-			<input type="password" placeholder="Password">
+			<input type="text" id='name' name='name' placeholder="Username">
+			<input type="password" id='pw' name='pw' placeholder="Password">
 			<button type="submit" id="login-button">Login</button>
 		</form>
 	</div>
@@ -47,7 +47,19 @@ $('#login-button').click(function(event){
 	event.preventDefault();
 	$('form').fadeOut(500);
 	$('.wrapper').addClass('form-success');
-	setTimeout(window.location.href='{:U("Index/index")}',4000);
+	$.ajax({
+        type: "POST",
+        url: "{:U('Home/users/checkUser')}",
+        data: {
+        	name:$('#name').val(),
+            pw: $('#pw').val(),
+        },
+        dataType: "json",
+        success: function (res) {
+        	console.log(res);
+        }
+    });
+	// setTimeout(window.location.href='{:U("Index/index")}',4000);
 });
 </script>
 

@@ -13,12 +13,12 @@
     <title>Carousel Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/jd/Public/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="/engine/Public/css/bootstrap/bootstrap.min.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]>
-    <script src="/jd/Public/js/index/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="/jd/Public/js/index/ie-emulation-modes-warning.js"></script>
+    <script src="/engine/Public/js/index/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="/engine/Public/js/index/ie-emulation-modes-warning.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -27,7 +27,7 @@
     <![endif]-->
 
     <!-- Custom styles for this template -->
-    <link href="/jd/Public/css/index/carousel.css" rel="stylesheet">
+    <link href="/engine/Public/css/index/carousel.css" rel="stylesheet">
 </head>
 <!-- NAVBAR
 ================================================== -->
@@ -252,11 +252,11 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="/jd/Public/js/jq/jquery.min.js"></script>
-<script src="/jd/Public/js/bootstrap/bootstrap.min.js"></script>
-<script src="/jd/Public/js/index/docs.min.js"></script>
+<script src="/engine/Public/js/jq/jquery.min.js"></script>
+<script src="/engine/Public/js/bootstrap/bootstrap.min.js"></script>
+<script src="/engine/Public/js/index/docs.min.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="/jd/Public/js/index/ie10-viewport-bug-workaround.js"></script>
+<script src="/engine/Public/js/index/ie10-viewport-bug-workaround.js"></script>
 
 
 <div id="global-zeroclipboard-html-bridge" class="global-zeroclipboard-container"
