@@ -23,3 +23,4 @@ define('APP_PATH','./Engine/');
 // 引入ThinkPHP入口文件
 require './ThinkPHP/ThinkPHP.php';
 
+//testing
