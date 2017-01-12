@@ -11,14 +11,14 @@
     <title>Fixed Top Navbar Example for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/jd/Public/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="/engine/Public/css/bootstrap/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="/jd/Public/css/inform/navbar-fixed-top.css" rel="stylesheet">
+    <link href="/engine/Public/css/inform/navbar-fixed-top.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="/jd/Public/js/inform/ie-emulation-modes-warning.js"></script>
+    <script src="/engine/Public/js/inform/ie-emulation-modes-warning.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -48,8 +48,8 @@
               </div>
               <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                  <li class="active"><a href="<?php echo U('Index/index');?>">首页</a></li>
-                  <li><a href="<?php echo U('Inform/index');?>">通知</a></li>
+                  <li><a href="<?php echo U('Index/index');?>">首页</a></li>
+                  <li class="active"><a href="<?php echo U('Inform/index');?>">通知</a></li>
                   <li><a href="<?php echo U('File/index');?>">文件</a></li>
                   <li><a href="<?php echo U('Report/index');?>">报表</a></li>
                   <li class="dropdown">
@@ -91,10 +91,10 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="/jd/Public/js/jq/jquery.min.js"></script>
-    <script src="/jd/Public/js/bootstrap/bootstrap.min.js"></script>
+    <script src="/engine/Public/js/jq/jquery.min.js"></script>
+    <script src="/engine/Public/js/bootstrap/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="/jd/Public/js/inform/ie10-viewport-bug-workaround.js"></script>
+    <script src="/engine/Public/js/inform/ie10-viewport-bug-workaround.js"></script>
   
 
 </body></html>

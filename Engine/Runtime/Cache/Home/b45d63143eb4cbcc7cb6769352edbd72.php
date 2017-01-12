@@ -55,9 +55,13 @@ $('#login-button').click(function(event){
         dataType: "json",
         success: function (res) {
         	if(res.Status==200){
-        		setTimeout(window.location.href='<?php echo U("Index/index");?>',4000);
         	$('form').fadeOut(500);
 			$('.wrapper').addClass('form-success');
+			if(res.power==0){
+				    setTimeout(window.location.href='<?php echo U("Index/index");?>',4000);
+			}else if(res.power==1){
+				    setTimeout(window.location.href='<?php echo U("Index/index");?>',4000);
+			}
         	}else{
         		alert(res.Mes);
         	}

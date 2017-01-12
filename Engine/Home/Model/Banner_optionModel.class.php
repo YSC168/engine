@@ -12,6 +12,7 @@ use Think\Model;
 
 class banner_optionModel extends Model
 {
+	// public function getBanner($oper,$file_id='',$file){
 
-
+	// }
 }

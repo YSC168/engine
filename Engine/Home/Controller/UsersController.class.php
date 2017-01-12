@@ -34,10 +34,12 @@ class UsersController extends Controller
             $model = D('Users');
             $res   = $model->checkUser($name, $pw);
             if ($res) {
-            	$res = array(
+                $res = array(
+                    'power'  => $res['power'],
                     'Status' => 200,
                     'Mes'    => '登录成功！',
                 );
+                session('name', $name);
             } else {
                 $res = array(
                     'Status' => 1,
@@ -46,6 +48,31 @@ class UsersController extends Controller
             }
             $this->ajaxReturn($res);
         }
+    }
+    /**
+     * 获取用户权限
+     * @author 风雨雾凇,
+     * @version     [version]
+     * @anotherdate 2017-01-12
+     * @return      power     权限
+     */
+    public function getPower()
+    {
+        $model = D('users');
+        $power = $model->getPower();
+        return $power;
+    }
+
+    /**
+     * 设置老师管理权限
+     * @author 风雨雾凇,
+     * @version     [version]
+     * @anotherdate 2017-01-12
+     */
+    public function setPower()
+    {
+        $model = D('Users');
+        $model->setPower();
     }
 
 }
