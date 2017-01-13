@@ -105,9 +105,9 @@
                                 <td class="check-mail">
                                     <input type="checkbox" class="i-checks" checked>
                                 </td>
-                                <td class="mail-ontact"><a href="mail_detail.html">Amaze UI</a>
+                                <td class="mail-ontact"><a href="<?php echo U('Index/InformDetail');?>">Amaze UI</a>
                                 </td>
-                                <td class="mail-subject"><a href="mail_detail.html">Amaze UI Beta2 发布</a>
+                                <td class="mail-subject"><a href="<?php echo U('Index/InformDetail');?>">Amaze UI Beta2 发布</a>
                                 </td>
                                 <td class=""></td>
                                 <td class="text-right mail-date">上午10:57</td>

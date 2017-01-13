@@ -70,7 +70,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="J_menuItem" href="mail_detail.html">发布新通知</a>
+                            <a class="J_menuItem" href="<?php echo U('Index/InformWrite');?>">发布新通知</a>
                         </li>
                         <li>
                             <a class="J_menuItem" href="<?php echo U('Index/InformManager');?>">管理通知</a>
@@ -93,7 +93,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="J_menuItem" href="mail_detail.html">添加文件</a>
+                            <a class="J_menuItem" href="<?php echo U('Index/FileUpload');?>">添加文件</a>
                         </li>
                         <li>
                             <a class="J_menuItem" href="<?php echo U('Index/FileManager');?>">管理文件</a>
@@ -132,7 +132,10 @@
                     </a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a class="J_menuItem" href="mail_detail.html">Banner设置</a>
+                            <a class="J_menuItem" href="<?php echo U('Index/BannerOption');?>">Banner设置</a>
+                        </li>
+                        <li>
+                            <a class="J_menuItem" href="<?php echo U('Index/UserOption');?>">管理员设置</a>
                         </li>
                         <li>
                             <a class="J_menuItem" href="mail_compose.html">通知设置</a>
@@ -145,8 +148,6 @@
                         </li>
                     </ul>
                 </li>
-
-
 
 
                 <li class="line dk"></li>
